@@ -7,13 +7,13 @@ const InputTodo = () => {
 		e.preventDefault();
 		try {
 			const body = { description };
-			const response = await fetch("http://localhost:5000/todos", {
+			const response = await fetch("/todos", {
 				method: "POST",
 				headers: { "Content-type": "application/json" },
 				body: JSON.stringify(body),
 			});
 
-			// window.location = "/";
+			window.location = "/";
 		} catch (err) {
 			console.log(err.message);
 		}
